@@ -61,7 +61,7 @@
   }
   
   .title--lg {
-    font-size: 9rem;
+    font-size: 7rem;
     font-weight: bold;
     line-height: 1.05;
   }
@@ -158,6 +158,55 @@
     color: #f5f5f1;
   }
 
+  #form-success {
+    text-align: center;
+    padding: 2rem;
+    background: var(--color-bg-secondary);
+    border-radius: 8px;
+    margin-top: 1rem;
+    animation: fadeIn 0.5s ease-in-out;
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .success-message {
+    text-align: center;
+    padding: 2rem;
+    background: #f8f9fa;
+    border-radius: 8px;
+    margin-top: 2rem;
+    border: 1px solid #e1e1e1;
+  }
+  
+  .success-message svg {
+    margin-bottom: 1rem;
+  }
+  
+  .success-message h3 {
+    color: #2e7d32;
+    margin-bottom: 0.5rem;
+  }
+
+  #submit-btn {
+  color: #bdbdbd;
+  }
+
+  #link--highlight:hover {
+    color: red;
+  }
+
+  #submit-btn:hover {
+    color: #fff;
+    }
+  
+  .success-message p {
+    color: #555;
+    margin-bottom: 1.5rem;
+  }
+
   .btn:hover {
     opacity: .8;
     color: white;
@@ -190,6 +239,16 @@
     height: 4px;
     width: 100%;
     display: inline-block;
+  }
+
+  .btn--link:hover {
+    color: #284454;
+
+  }
+
+  #btn--link:hover {
+    color: #284454;
+
   }
   
   .btn--nav {
@@ -264,8 +323,10 @@
     grid-template-columns: 300px 1fr;
     margin-bottom: 100px;
     display: grid;
-    
-  }
+    align-items: center;  /* Vertically centers content */
+    margin-left: auto;   /* These two margins will center */
+    margin-right: auto;  /* the entire grid horizontally */
+}
   
   @media (min-width: 601px) {
     .portfolio:nth-child(2n+1) {
@@ -278,7 +339,9 @@
   }
   
   .portfolio-screenshot {
-    border-radius: 50%;
+    border-radius: 10%;
+    /* margin-top: 100px; */
+
   }
   
   @media (max-width: 600px) {
@@ -289,6 +352,7 @@
     .portfolio-screenshot {
       width: 175px;
       height: 175px;
+      padding: 25px;
     }
   }
   
@@ -379,12 +443,9 @@
     box-sizing: border-box;
     border-color: transparent;
     cursor: pointer;
-    z-index: 1;
     padding: 5px;
     transition: transform .18s;
-    position: fixed;
-    top: 5px;
-    right: 5px;
+
   }
   
   #toggle-theme:active {
